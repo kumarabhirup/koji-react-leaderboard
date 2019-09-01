@@ -1,0 +1,8 @@
+{
+  "short_name": "koji-react-leaderboard",
+  "name": "koji-react-leaderboard",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
