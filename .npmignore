@@ -1,0 +1,12 @@
+src
+example
+.vscode
+.eslintrc
+.prettierrc
+package-lock.json
+tsconfig.json
+tsconfig.test.json
+.gitignore
+node_modules
+.travis.yml
+rollup.config.js
