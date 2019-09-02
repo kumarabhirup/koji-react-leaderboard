@@ -4,10 +4,6 @@
 
 import * as React from 'react'
 
-type Props = { text: string }
+const SaveToLeaderboard = (): React.ReactNode => <div>SaveToLeaderboard</div>
 
-export class SaveToLeaderboard extends React.Component<Props> {
-  render(): React.ReactNode {
-    return <div>SaveLeaderboard</div>
-  }
-}
+export { SaveToLeaderboard }
