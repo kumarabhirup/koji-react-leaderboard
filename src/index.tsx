@@ -1,16 +1,6 @@
-/**
- * @class ExampleComponent
- */
+import * as GetLeaderboard from './components/GetLeaderboard'
+import * as SaveToLeaderboard from './components/SaveToLeaderboard'
 
-import * as React from 'react'
-
-import styles from './styles.css'
-
-export type Props = { text: string }
-
-export default class ExampleComponent extends React.Component<Props> {
-  render(): React.ReactNode {
-    const { text } = this.props
-    return <div className={styles.test}>Example Component: {text}</div>
-  }
-}
+export * from './components/GetLeaderboard'
+export * from './components/SaveToLeaderboard'
+export default { GetLeaderboard, SaveToLeaderboard }
