@@ -16,6 +16,8 @@ npm install -S koji-react-leaderboard
 
 ## 📚 Library
 
+> **Please Note:** This library is made only for those Koji users who have [Koji Leaderboard API](https://www.npmjs.com/package/koji-leaderboard-api) already setup on the Koji Backend.
+
 - **GetLeaderboard** React Component
 - **SaveToLeaderboard** React Component
 
