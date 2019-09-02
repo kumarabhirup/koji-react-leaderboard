@@ -10,20 +10,7 @@
 import * as React from 'react'
 import { useState, useEffect } from 'react'
 
-/* eslint-disable prettier/prettier */
-interface Props {
-  kojiLeaderboardBackendUri: string | null;
-  endpoint?: string;
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  children?: any;
-}
-/* eslint-enable prettier/prettier */
-
-const defaultProps: Props = {
-  kojiLeaderboardBackendUri: null,
-  endpoint: 'leaderboard',
-}
+import { Props, defaultProps } from '../lib/constants'
 
 const GetLeaderboard: React.FunctionComponent<Props> = props => {
   const [isLoading, setIsLoading]: [boolean, Function] = useState(false)
