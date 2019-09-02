@@ -1,7 +1,7 @@
 {
   "name": "koji-react-leaderboard",
-  "version": "0.0.2",
-  "description": "The React Render Prop Component that fetches Leaderboard from Koji Backend",
+  "version": "0.0.3",
+  "description": "React Render Prop Components that fetch and save Leaderboard data to and from the Koji Backend.",
   "author": "KumarAbhirup",
   "license": "MIT",
   "repository": "KumarAbhirup/koji-react-leaderboard",
