@@ -1,8 +1,8 @@
 # koji-react-leaderboard
 
-> The React Render Prop Component that fetches Leaderboard from Koji Backend
+> The React Render Prop Component that fetches Leaderboard from the Koji Backend
 
-[![NPM](https://img.shields.io/npm/v/koji-react-leaderboard.svg)](https://www.npmjs.com/package/koji-react-leaderboard) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/koji-react-leaderboard.svg)](https://www.npmjs.com/package/koji-react-leaderboard) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-AirBnB--TypeScript-brightgreen.svg)](https://github.com/KumarAbhirup/koji-react-leaderboard/blob/master/.eslintrc)
 
 ## Install
 
@@ -10,17 +10,42 @@
 npm install --save koji-react-leaderboard
 ```
 
+## Library
+
+- **GetLeaderboard** React Component
+- **SaveToLeaderboard** React Component
+
 ## Usage
 
-```tsx
-import * as React from 'react'
+### GetLeaderboard
 
-import MyComponent from 'koji-react-leaderboard'
+```jsx
+import React, { Component } from 'react'
 
-class Example extends React.Component {
+import { GetLeaderboard } from 'koji-react-leaderboard'
+
+class YourComponent extends Component {
   render () {
     return (
-      <MyComponent />
+      <GetLeaderboard>
+        {({ scores }, loading, error) => (
+          (loading && !error) && <div>It's loading.</div>
+
+          (!loading && !error) && (
+              <div class="container">
+              { scores.map(({ name, score }, index) => (
+                <li key={index}>
+                  Name: { name }
+                  <br />
+                  Score: { score }
+                </li>
+              )) }
+            </div>
+          )
+
+          error && <div>Error occured: { error.message }</div>
+        )}
+      </GetLeaderboard>
     )
   }
 }
